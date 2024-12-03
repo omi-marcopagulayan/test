@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower for Master</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+    <style>
+        /* Yellow gradient background */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Sacramento', cursive; /* Girly font style */
+            background: linear-gradient(to bottom right, #FFEE58, #FFD600); /* Yellow gradient */
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Main container */
+        .text-center {
+            z-index: 2;
+            text-align: center;
+        }
+
+        /* Flower Container */
+        .flower-container {
+            width: 350px; /* Larger flower */
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Flower styling */
+        .flower {
+            width: 100%;
+            height: 100%;
+            animation: float 3s infinite ease-in-out;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Shadow for emphasis */
+            border-radius: 15px; /* Rounded edges */
+        }
+
+        /* Floating animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Sparkles using SVG */
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .sparkle {
+            animation: twinkle 2s infinite;
+            opacity: 0.7;
+        }
+
+        /* More dynamic glitter animations */
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Title styling */
+        h1 {
+            font-size: 3rem;
+            color: #FFF;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Soft shadow for text */
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h1>Flower for Master</h1>
+        <div class="flower-container">
+            <img 
+                class="flower" 
+                src="https://www.flowerchimp.com.ph/cdn/shop/products/0720-Isabelle-Thumbnail-01_1946x.jpg?v=1626848587" 
+                alt="Beautiful Flower"
+            >
+        </div>
+    </div>
+
+    <!-- SVG glitter effect -->
+    <svg>
+        <!-- Sparkles scattered randomly -->
+        <circle class="sparkle" cx="30%" cy="20%" r="2" fill="white"></circle>
+        <circle class="sparkle" cx="70%" cy="40%" r="3" fill="white"></circle>
+        <circle class="sparkle" cx="50%" cy="60%" r="2.5" fill="white"></circle>
+        <circle class="sparkle" cx="80%" cy="80%" r="2" fill="white"></circle>
+        <circle class="sparkle" cx="20%" cy="70%" r="3" fill="white"></circle>
+        <circle class="sparkle" cx="40%" cy="50%" r="1.5" fill="white"></circle>
+        <circle class="sparkle" cx="90%" cy="30%" r="2.5" fill="white"></circle>
+        <circle class="sparkle" cx="10%" cy="50%" r="2" fill="white"></circle>
+        <circle class="sparkle" cx="60%" cy="10%" r="3" fill="white"></circle>
+    </svg>
+
+    <!-- Bootstrap JS -->
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>
